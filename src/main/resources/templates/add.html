@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html xmlns:th="http://www.thymeleaf.org">
+<head>
+  <title>Thêm Khuyến mãi</title>
+</head>
+<body>
+<h1>Thêm Khuyến mãi</h1>
+
+<form action="#" th:action="@{/promotions/add}" th:object="${promotion}" method="post">
+  <label for="title">Tiêu đề:</label>
+  <input type="text" id="title" th:field="*{title}" required/>
+
+  <label for="">Mô tả:</label>
+  <input type="text" id="" th:field="*{description}" required/>
+
+  <label for="discount">Giảm giá:</label>
+  <input type="number" id="discount" th:field="*{discount}" required/>
+
+  <button type="submit">Thêm</button>
+</form>
+
+<a href="/promotions">Quay lại</a>
+</body>
